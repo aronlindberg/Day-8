@@ -41,11 +41,6 @@ plot(cl.ward, labels=FALSE, main="Ward")
 plot(cl.mcquitty, labels=FALSE, main="WPGMA")
 dev.off()
 
-par(mfrow=c(1,2))
-plot(cl.ward, labels=FALSE, main="Ward")
-plot(cl.mcquitty, labels=FALSE, main="WPGMA")
-dev.off()
-
 ## 4. 3-cluster solution
 cl.hw3 <- cutree(cl.ward, k=3)
 
@@ -53,6 +48,9 @@ cl.hw3 <- cutree(cl.ward, k=3)
 seqIplot(biofam.seq, group=cl.hw3, sort="from.end")
 
 ## Cluster 1: Parental, Cluster 2: Left Home - No Child, 3: Staying with parents
+
+CONTINUE HERE!!!!
+
 
 ## 5. Silhouette
 plot(silhouette(cl.hw3, dmatrix=as.matrix(dOM)))
